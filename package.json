@@ -1,0 +1,17 @@
+{
+  "name": "queuectl",
+  "version": "1.0.0",
+  "description": "CLI-based background job queue system with worker processes and DLQ",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "queuectl": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": ["queue", "job", "worker", "cli", "dlq"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
