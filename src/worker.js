@@ -21,7 +21,7 @@ export class WorkerManager {
 
   stop() {
     this.running = false;
-    console.log('⏳ Waiting for workers to finish current jobs...');
+    console.log('Waiting for workers to finish current jobs...');
     setTimeout(() => {
       console.log('✓ All workers stopped');
       process.exit(0);

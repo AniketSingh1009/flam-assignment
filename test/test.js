@@ -18,7 +18,7 @@ async function sleep(ms) {
 }
 
 async function runTests() {
-  console.log('🧪 Running queuectl tests...\n');
+  console.log('Running queuectl tests...\n');
 
   if (fs.existsSync('queue.db')) {
     fs.unlinkSync('queue.db');
