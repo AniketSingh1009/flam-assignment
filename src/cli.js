@@ -10,7 +10,9 @@ const config = new Config();
 const args = process.argv.slice(2);
 const command = args[0];
 const subcommand = args[1];
-
+// fixed the little typo in the command parsing
+// Check if the command is valid
+//command is available in the args array
 async function main() {
   try {
     if (command === 'enqueue') {
@@ -26,7 +28,7 @@ async function main() {
         console.log(`✓ Started ${count} worker(s)`);
         
         process.on('SIGINT', () => {
-          console.log('\n⏳ Gracefully shutting down workers...');
+          console.log('\n Gracefully shutting down workers...');
           workerManager.stop();
         });
         
@@ -52,7 +54,7 @@ async function main() {
       const stateIndex = args.indexOf('--state');
       const state = stateIndex !== -1 ? args[stateIndex + 1] : null;
       const jobs = queue.listJobs(state);
-      console.log(`\n📋 Jobs${state ? ` (${state})` : ''}:`);
+      console.log(`\n Jobs${state ? ` (${state})` : ''}:`);
       jobs.forEach(job => {
         console.log(`  ${job.id} - ${job.state} - attempts: ${job.attempts}/${job.max_retries}`);
       });
