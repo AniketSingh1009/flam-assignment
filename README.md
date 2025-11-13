@@ -81,7 +81,7 @@ node src/cli.js worker start --count 3
 node src/cli.js status
 
 # Output:
-# 📊 Queue Status:
+# Queue Status:
 #   Pending:    2
 #   Processing: 1
 #   Completed:  5
@@ -127,8 +127,6 @@ node src/cli.js config get max-retries
 # List all configuration
 node src/cli.js config list
 ```
-
-## Architecture Overview
 
 ### Job Lifecycle
 
@@ -255,7 +253,7 @@ queuectl/
 │   ├── cli.js              # CLI interface and command routing
 │   ├── queue.js            # Job queue management and persistence
 │   ├── worker.js           # Worker process and job execution
-│   └── config.js           # Configuration management
+│   └── config.js           # Configuration 
 ├── test/
 │   └── test.js             # Automated test suite
 ├── test-jobs/              # Example job files for testing
@@ -299,11 +297,3 @@ queuectl/
 |-----|---------|-------------|
 | max-retries | 3 | Maximum retry attempts before moving to DLQ |
 | backoff-base | 2 | Base for exponential backoff calculation |
-
-## Demo Video
-
-[Link to demo video will be added here]
-
-## License
-
-MIT
